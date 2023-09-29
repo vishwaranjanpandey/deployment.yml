@@ -1,0 +1,18 @@
+metadata:
+  name: cloudknowledges
+spec:
+  selector:
+    matchLabels:
+      app: cloudknowledges
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: cloudknowledges
+    spec:
+      containers:
+      - name: cloudknowledges
+        image: vishwaranjan.p12@gmail.com/kubernetesproject
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
